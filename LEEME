@@ -1,0 +1,31 @@
+Estación de Sensores (CEIP Serra Vincios)
+=========================================
+Estación de sensores para la medición de temperatura, luminosidad y humedad de 
+suelo en ambiente cubierto basada en Arduino y NodeMCU para el envío de datos a
+la plataforma open source ThingSpeak.
+
+Esquemas de conexión realizados con Fritzing: http://fritzing.org/
+
+Alimentación
+------------
+Mediante alimentador de corriente de 9-12V y polaridad positiva. Revisar en caso 
+de desconexión que la flecha del cable coincida con el esquema en la clavija en
+el que el punto central esté marcado con un símbolo positivo y el semicírculo
+con un símbolo negativo.
+
+HUZZAH ESP8266
+--------------
+ * Vbat → 5V (línea roja)
+ * GND → GND (línea negra)
+ * Rx → Tx (Arduino)
+ * Tx → Rx (Arduino)
+
+ThingSpeak
+----------
+Los datos se envían cada minuto al canal https://thingspeak.com/channels/105939
+del usuario «librincios», donde se pueden consultar y modificar las gráficas de
+los tres sensores.
+
+En caso de funcionamiento incorrecto, pulsar el botón de reinicio de la placa
+HUZZAH ESP8266, esperar 10 segundos y pulsar el botón de reinicio de la placa
+Arduino UNO.
